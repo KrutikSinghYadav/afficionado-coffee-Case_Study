@@ -130,7 +130,11 @@ def insight(text):
 # ──────────────────────────────────────────────
 @st.cache_data
 def load_data():
+    import os
+    BASE = os.path.dirname(os.path.abspath(__file__))
     paths = [
+        os.path.join(BASE, "afficionadocoffee - Transactions.csv"),
+        os.path.join(BASE, "Transactions.csv"),
         "afficionadocoffee - Transactions.csv",
         "Transactions.csv",
     ]
